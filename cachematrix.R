@@ -1,4 +1,6 @@
-## [Put comments here that describe what your functions do]
+## makeCacheMatrix will hold and provide the input matrix for inverse computation
+## This function will also cache the inverse of the matrix from the cacheSolve
+## function which can be retrieved at any point of time saving the computation time.
 
 makeCacheMatrix <- function(x = matrix()) {
 
@@ -16,6 +18,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 }
 
+## cacheSolve function returns the inverse of the matrix using the solve() function
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
