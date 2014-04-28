@@ -9,7 +9,9 @@ makeCacheMatrix <- function(x = matrix()) {
                 x <<- y
                 m <<- NULL
         }
+        ## get used to access the matrix for which the inverse needs to be computed
         get <- function() x
+        ##setinverse caches the inverse of the matrix
         setinverse <- function(inverse) m <<- inverse
         getinverse <- function() m
         list(set = set, get = get,
@@ -19,6 +21,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 ## cacheSolve function returns the inverse of the matrix using the solve() function
+## if the inverse was not previously calculated and cached.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
